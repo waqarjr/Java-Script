@@ -15,6 +15,13 @@ let d = 10;
 var e = 10;
 const f = 10;
 
+// Longhand
+let g;
+let u;
+let v = 10;
+// shorthand
+let w,r,s=10;
+
 //               Hoisting  
 // Defination: Hoisting means variable is declared before intilization
 
@@ -88,3 +95,14 @@ if (true) {
   // console.log(d); // Error! 'd' outside the block
 
 //   <> ... Finish... <>
+
+// The method of input(given values from user) & oputput(display value ) values 
+
+//  <>... Input ...<>
+// 1 prompt("");
+// 2 input 
+
+// <>... Output ...<>
+// 1 console.log("")
+// 2 document.write("")
+// 3 alert('')

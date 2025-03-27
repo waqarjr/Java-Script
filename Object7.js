@@ -48,8 +48,7 @@ function Person2(name, age, country) {
       username: "dev123",
       email: "dev@example.com"
     };
-    
-    // Updating values
+    // Two methods of Updating values
     user.email = "newemail@example.com";
     user["username"] = "newDev123";
     
@@ -82,3 +81,66 @@ const user1 = { name: "Alice", age: 30 };
 console.log("age" in user1); // true
 console.log(user1.hasOwnProperty("name")); // true
 console.log(user1.hasOwnProperty("email")); // false
+
+// <>... Looping Through an Object ...<>
+// to iterate over an object’s properties, use a for...in loop.
+const student = {
+  name: "Sarah",
+  grade: "A",
+  subject: "Math"
+};
+
+for (let key in student) {
+  console.log(key + ": " + student[key]);
+}
+
+// <>... Object Methods (Functions Inside Objects) ...<>
+const User = {
+  name: "Emma",
+  age: 28,
+  greet: function () {
+    console.log("Hello, my name is " + this.name);
+  }
+};
+
+User.greet(); // Output: Hello, my name is Emma
+
+// <>... Object.keys(), Object.values(), and Object.entries() ...<>
+// These methods help work with object data efficiently.
+const person4 = {
+  name: "Liam",
+  age: 32,
+  country: "Canada"
+};
+
+console.log(Object.keys(person4));   // ["name", "age", "country"]
+console.log(Object.values(person4)); // ["Liam", 32, "Canada"]
+console.log(Object.entries(person4)); // [["name", "Liam"], ["age", 32], ["country", "Canada"]]
+
+//<>... Merging Objects (Object.assign() and Spread ... Operator) ...<>
+const obj1 = { a: 1, b: 2 };
+const obj2 = { c: 3, d: 4 };
+
+// Using Object.assign()
+const merged1 = Object.assign({}, obj1, obj2);
+console.log(merged1); // { a: 1, b: 2, c: 3, d: 4 }
+
+// Using spread operator
+const merged2 = { ...obj1, ...obj2 };
+console.log(merged2); // { a: 1, b: 2, c: 3, d: 4 }
+
+
+//<>... Converting Objects to JSON (String) and Back ...<>
+
+const data = {
+  name: "Olivia",
+  age: 27
+};
+
+// Convert object to JSON string
+const jsonString = JSON.stringify(data);
+console.log(jsonString); // {"name":"Olivia","age":27}
+
+// Convert JSON string back to object
+const jsonObject = JSON.parse(jsonString);
+console.log(jsonObject);

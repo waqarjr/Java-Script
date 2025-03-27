@@ -42,6 +42,13 @@ console.log(cars); // ["BMW", "Toyota", "Honda"]
 cars.shift(); // Removes the first element from Start
 console.log(cars); // ["Toyota", "Honda"]
 
+// <>... Running loop over an array ...<>
+// Used to iterate over iterable objects like arrays, strings, sets, and maps.
+//     Array 
+let Arraynumbers = [10, 20, 30, 40];
+for (let num of Arraynumbers) {
+    console.log(num);
+}
 
 // <>... Changing Values at Each Index (Looping Over an Array) ...<>
 
@@ -62,7 +69,7 @@ number.forEach((num, index,array) => {
 console.log(number); // [4, 8, 12, 16] new array we get 
 
 // map()
-// this work like a forEach() but differnt is that he donot Chage anything in previous array , and will return new array
+// this work like a forEach() but differnt is that he donot Change anything in previous array , and will return new array
 
 let doubled = number.map(num => num * 2);
 console.log(doubled); // [8, 16, 24, 32]
@@ -72,7 +79,7 @@ console.log(number); // [4, 8, 12, 16] the value of number Array donot change
 //  if we do that then we get undefined value
 
 // <>... Searching and Filtering ...<> 
-// usingIndexOF()
+// using IndexOF()
 
 let cities = ["London", "Paris", "New York"];
 

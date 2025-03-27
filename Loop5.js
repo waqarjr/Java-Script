@@ -85,8 +85,8 @@ for (let hello in person) {
 
 // Used to iterate over iterable objects like arrays, strings, sets, and maps.
 //     Array 
-let numbers = [10, 20, 30, 40];
-for (let num of numbers) {
+let Arraynumbers = [10, 20, 30, 40];
+for (let num of Arraynumbers) {
     console.log(num);
 }
 

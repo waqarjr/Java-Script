@@ -42,8 +42,8 @@ var hoistingA = 10;
 // var : Variable can be re-declared & updated. A global scope variable. 
 
 //              Re-declared:
-var x = 10;  
-console.log(x); // Output: 10
+var x = 40;  
+console.log(x,"x"); // Output: 10
 
 var x = 20; //  Re-declared
 console.log(x); // Output: 20;
@@ -106,3 +106,19 @@ if (true) {
 // 1 console.log("")
 // 2 document.write("")
 // 3 alert('')
+
+// <>... Operators ...<>
+// used for perform some operation on data
+
+// Arithmatic opeators 
+// + , - , * , / , % Modulus , ^ Exponentiation , ++ increment , -- decrement
+
+//  Assignment Operators
+// = += -= *=  %= **=
+
+// Comparison Operators
+// == equal to, === equal to & type, != not equal to , !== not equal to & type 
+// < , <= , > , => 
+
+// logical Operations  
+// && , || , ! , 

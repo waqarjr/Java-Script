@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="head" id="head">this is head</h1>
+    <h1 id="heading" > this is  a heading 2</h1>
+    <input type="text" name="text" id="text">
+    <input type="text" name="value" id="value"  value="Waqar">
+    <div id="div" style="width: 200px; height: 200px; background-color: aqua; " >
+        <button id="remove" onclick="remove()" >Remove</button>
+    </div>
+<script>
+// DOM (Document Object Model) 
+// The DOM allows you to manipulate HTML elements dynamically.
+
+//<>... Creating Elements in the DOM ...<>
+
+let newParagraph = document.createElement("p");
+// Add text to the element
+newParagraph.textContent = "Hello, this is a new paragraph!";
+
+// Append the new element to the body (or any other existing element)
+document.body.appendChild(newParagraph);
+// Note* 
+// document : this will give us a  file in which we are working
+// document.body = means this show all the that files code  that are present in his body tag
+
+let headingid = document.getElementById('head');  
+let headingclass = document.getElementsByClassName('head');
+let headingTag = document.getElementsByTagName('h1');
+
+// querySelector always returns first match
+let headingQuerySelect = document.querySelector('h1');// .head , #head , h1 -> also work like getElementById,className,TagName
+
+// querySelectorAll always returns all matches
+let heading2 = document.querySelectorAll('.head');
+
+console.log(headingid);
+console.log(headingclass);
+console.log(headingTag);
+console.log(headingQuerySelect);
+console.log(heading2);
+
+// Editing the tag
+let editId = document.getElementById('heading');
+
+// Styling to the element 
+editId.textContent = "Waqar ahmad";
+editId.style.border = "2px solid black";
+editId.style.color = "red";
+console.log(editId);
+
+// Attribute 
+let anchor = document.createElement('a');
+anchor.innerText = "google";
+anchor.setAttribute("href","https://www.google.com");
+anchor.style.color = "green";
+anchor.style.textDecoration = "none";
+console.log(anchor);
+document.body.appendChild(anchor);
+
+// for  show image
+let image = document.createElement("img");
+image.setAttribute('src',"../image.png");
+image.style.borderRadius = "2%";
+image.style.backgroundColor = "#4F525A"
+console.log(image);
+image.classList.add("rounded");
+document.body.appendChild(image);
+
+const input = document.getElementById('text');
+input.setAttribute('type',"password");
+console.log(input);
+
+const value = document.getElementById('value');
+value.value = "ahmad";
+// for getting input filed value from user 
+value.addEventListener('input',()=>{
+    console.log(value.value)
+})
+
+// for removing the element 
+let removeBtn = document.getElementById("remove");
+let removeDiv = document.getElementById("div");
+removeBtn.addEventListener('click',function() {
+    removeDiv.remove(); // removes the div
+})
+
+
+</script>
+</body>
+</html>

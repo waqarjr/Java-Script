@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- inline Events -->
+<button onclick="alert('Button Clicked!')">Click Me</button>
+    <!-- JavaScript Property Event Handlers -->
+<button type="button" id="button">Click Me </button>
+<button type="button" onclick="button1()">Click Me </button>
+    <script>
+    // JavaScript events allow us to execute code when a user interacts with a webpage
+
+// In js lot of events are present but the most used events are given below:
+// Clicking a button
+// Hovering over an element
+// Typing in an input field
+// Submitting a form
+// Pressing a key on the keyboard
+
+// Way to added Events in js                  ^  
+// 1 -> Inline Event Handlers (not recomanded | above)
+
+// 2 -> JavaScript Property Event Handlers
+    function button1() {
+            alert("button Press");
+        }
+
+// 3 -> addEventListener() (Best method consider)
+    const button = document.getElementById('button');
+    button.addEventListener("click", ()=>{
+        alert("Button Press")
+    })
+
+// Mouse            Events
+// Event	    Description
+// click	    Fires when an element is clicked
+// dblclick	    Fires when an element is double-clicked
+// mousedown	Fires when a mouse button is pressed down
+// mouseup	    Fires when a mouse button is released
+// mousemove	Fires when the mouse moves over an element
+// mouseenter	Fires when the mouse enters an element (doesn't bubble)
+// mouseleave	Fires when the mouse leaves an element (doesn't bubble)
+// mouseover	Fires when the mouse enters an element (bubbles)
+// mouseout	    Fires when the mouse leaves an element (bubbles)
+// contextmenu	Fires when the right mouse button is clicked    
+
+// Keyboard         Events
+// keydown	    Fires when a key is pressed down
+// keyup	    Fires when a key is released
+// keypress	    (Deprecated) Fires when a key is pressed and held down
+
+// Form         Events
+// submit	Fires when a form is submitted
+// change	Fires when an input value is changed
+// focus	Fires when an input field is focused
+// blur	    Fires when an input field loses focus
+// input	Fires when the value of an input field changes
+
+// Window Events
+// load	    Fires when the entire page is loaded
+// resize	Fires when the browser window is resized
+// scroll	Fires when the user scrolls the page
+// unload	Fires when the page is about to be unloaded
+
+// Clipboard Events
+// copy	    Fires when the user copies content
+// cut	    Fires when the user cuts content
+// paste	Fires when the user pastes content
+
+// Drag & Drop Events
+// dragstart	Fires when dragging starts
+// drag	        Fires while dragging
+// dragend	    Fires when dragging stops
+// dragover	    Fires when a dragged item is over a drop target
+// drop	        Fires when a dragged item is dropped
+
+
+    </script>
+</body>
+</html>

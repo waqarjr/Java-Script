@@ -11,6 +11,10 @@
     <!-- JavaScript Property Event Handlers -->
 <button type="button" id="button">Click Me </button>
 <button type="button" onclick="button1()">Click Me </button>
+<button type="button" id="parent">Parent</button>
+<button id="child" >Child</button>
+<button id="alert">alert</button>
+<button id="once" >Once alert</button>
     <script>
     // JavaScript events allow us to execute code when a user interacts with a webpage
 
@@ -55,10 +59,20 @@
 
 // Form         Events
 // submit	Fires when a form is submitted
-// change	Fires when an input value is changed
 // focus	Fires when an input field is focused
 // blur	    Fires when an input field loses focus
+
+// change	Fires when an input value is changed
+// explane : Fires only when the input loses focus (blur) after the value has changed.
+// Does not trigger on every keystroke.
+// Works for <input> (except type="radio" | "checkbox"), <select>, and <textarea>.
+// Best for finalized values (e.g. submitting a form, dropdown selections).
+
 // input	Fires when the value of an input field changes
+// Explane : Fires immediately whenever the user changes the input value.
+// Triggers on every keystroke, paste, or deletion.
+// Works for <input>, <textarea>, and <contenteditable> elements.
+// Best for live updates (e.g., showing character count, filtering results in real-time).
 
 // Window Events
 // load	    Fires when the entire page is loaded
@@ -77,6 +91,44 @@
 // dragend	    Fires when dragging stops
 // dragover	    Fires when a dragged item is over a drop target
 // drop	        Fires when a dragged item is dropped
+
+// Event Object (event)
+// While handling events, we can access details about the event using the event object.
+
+document.getElementById("parent").addEventListener("click", function (event) {
+    console.log("Clicked Element:", event.target);
+    console.log("Mouse X:", event.clientX);
+    console.log("Mouse Y:", event.clientY);
+});
+
+// removeEventListener used to remove the event listner
+function showMessage(){
+    alert("this is a alert")
+}
+const aler = document.getElementById("alert");
+aler.addEventListener("click",showMessage);
+
+setTimeout(()=>{
+    aler.removeEventListener("click",showMessage);
+},5000) 
+// for only once time open we can use this 
+const once = document.getElementById("once");
+once.addEventListener('click',()=>{
+    alert("hello");
+},{once:true})
+
+document.getElementById("child").addEventListener("click", function (event) {
+    if (event.target.matches(".child")) {
+        console.log("Child clicked:", event.target.textContent);
+    }
+});
+
+// we can also Custom Events (dispatchEvent)
+const myEvent = new Event("dblclick");
+document.addEventListener("dblclick", function () {
+    alert("Custom event triggered!");
+});
+document.dispatchEvent(myEvent);
 
 
     </script>

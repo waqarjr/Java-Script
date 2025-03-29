@@ -4,6 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #parent1 {
+            width: 300px;
+            padding: 20px;
+            background: #f0f0f0;
+            border: 2px solid #ccc;
+        }
+        .child1 {
+            padding: 10px;
+            margin: 5px;
+            background: lightblue;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <!-- inline Events -->
@@ -15,6 +29,13 @@
 <button id="child" >Child</button>
 <button id="alert">alert</button>
 <button id="once" >Once alert</button>
+
+<div id="parent1">
+    <div class="child1">Child 1</div>
+    <div class="child1">Child 2</div>
+    <div class="child1">Child 3</div>
+</div>
+
     <script>
     // JavaScript events allow us to execute code when a user interacts with a webpage
 
@@ -130,6 +151,11 @@ document.addEventListener("dblclick", function () {
 });
 document.dispatchEvent(myEvent);
 
+document.getElementById("parent1").addEventListener("click", function (event) {
+            if (event.target.matches(".child1")) {
+                console.log("Child clicked:", event.target.textContent);
+            }
+        })
 
     </script>
 </body>

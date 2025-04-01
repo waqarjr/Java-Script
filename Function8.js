@@ -81,12 +81,12 @@ console.log(square(5)); // Output: 25
 function calculate(a, b, operation) { 
     return operation(a, b);
 }
-
 const addition = (x, y) => x + y; // Arrow Function
 const multiplication = (x, y) => x * y; // Arrow Function
 
 console.log(calculate(10, 5, addition)); // Output: 15
 console.log(calculate(10, 5, multiplication)); // Output: 50
+
 // Exemple : 2
 function fetchData(callback) {
     console.log("Fetching data...");

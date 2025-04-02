@@ -33,9 +33,47 @@ return(<>
     const App = () => {
       return <Greeting name="John" />;
     };
-    
-*/}
+    // even i can pass value as a children props
+    <parent>
+      <child/>
+    </parent>
+    function parent(props) {
+      return(props.child);
+    }
+      key props :
+      keys are often used with lists (used in map function)
+      key is a unique number , not a string
+      {item.map(item =>{
+        <components key={1} />
+        })}
 
+        Rendring:
+        the process of taking code and display something on browser that process is called rendering
+      How does rendering works ?
+      he renders bcoz of vdom (virtual Document Object Model)
+      react rendering steps 1: state changes (update vdom) 2: react "diffs" (hey i saw that) 3: "reconciliation" 
+      
+      Events handling (click,mouse hover,keybord press) 
+      most used onClik,onChange,onSubmit
+
+      How to manage data in react ? 
+      by using states we can manage data  like (useState,useEffect,useRefrence,useContax,useReducer,useMemo,usecallback eg)
+      useState : manage state
+      useReducer : manage state
+      useEffect : external system( like: api)
+      useRefrence : "refrence " html
+      useMemo : improve app pref
+      useCallback : improve app pref
+      useContex : use data pass throw context
+
+      purity(how react components should work)
+      means that thake same input and same output , 
+      1: only return jsx 2: Dont chnage stuff that existed before rendering
+      
+      Strick mood :
+      develop problems in developments 
+*/}
+  
 </>)
 
 }

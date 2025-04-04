@@ -65,11 +65,6 @@ export const Hook = ()=>{
       <button onClick={() => setCount(count + 1)}>Re-render {count}</button>
     </div>
 
-        {/* useContext 
-          Provides a way to share state across multiple components without prop drilling    
-          Alternative to Redux for simpler global state needs
-        */}
-
         {/* useCallback 
         useCallback prevents the function from being recreated.
         React.memo ensures the child doesn’t re-render unless necessary.
@@ -95,7 +90,7 @@ export const Hook = ()=>{
     */}
     <div>
       <h2>Count: {state.count}</h2>
-      <button onClick={() => dispatch({ type: "INCREMENT" })}>+</button>By default, React loads all components at once, which can slow down large applications.
+      <button onClick={() => dispatch({ type: "INCREMENT" })}>+</button>
       <button onClick={() => dispatch({ type: "DECREMENT" })}>-</button>
     </div>
 

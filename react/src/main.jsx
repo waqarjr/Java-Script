@@ -4,6 +4,7 @@ import './index.css'
 import Hook from './Hooks'
 import Hooks1 from '../Hooks1'
 import Formhandle from './Formhandle'
+import Formvalidation from './Formvalidation'
 // import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
@@ -11,6 +12,7 @@ createRoot(document.getElementById('root')).render(
     {/* <App /> */}
     {/* <Hook/> */}
     {/* <Hooks1/> */}
-    <Formhandle/>
+    {/* <Formhandle/> */}
+    <Formvalidation/>
   </StrictMode>
 )

@@ -144,3 +144,9 @@ console.log(jsonString); // {"name":"Olivia","age":27}
 // Convert JSON string back to object
 const jsonObject = JSON.parse(jsonString);
 console.log(jsonObject);
+
+let newError = {}; 
+newError.name = "Waqar ahmad";
+newError.age = 23;
+newError.school = "Moon Public School";
+console.log(newError);//Output: { name: 'Waqar ahmad', age: 23, school: 'Moon Public School' }

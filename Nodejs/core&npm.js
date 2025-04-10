@@ -196,4 +196,9 @@ const unique = _.uniq(duplicates); // [1, 2, 3, 4, 5]
 // Find difference between arrays
 const arr1 = [1, 2, 3];
 const arr2 = [2, 3, 4];
-const diff = _.difference(arr1, arr2); // [1] 
+const diff = _.difference(arr1, arr2); // [1]
+
+// npm/yarn
+// npm is the default package manager for Node.js
+// Installing packages globally & locally
+// npm install <package-name> -g // globally

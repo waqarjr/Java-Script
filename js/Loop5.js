@@ -73,7 +73,7 @@ console.log(person.name); // Output: Ali
 // Both output same just for get single output value but in loop or multiple objects are present then ->  
 // we can't use *person.name* bcoz this will show only name but we needed a his value to so that's way we use this person["name"]
 for (let hello in person) {
-    console.log(hello); // person object all his  ObjectKey value store in hello, kwy fetchah all keys from person and then store in hello word  
+    console.log(hello); // person object all his  ObjectKey value store in hello, kwy fetchah all keys from person and then store in hello 
     console.log(hello, ":", person[hello]);
 }
 

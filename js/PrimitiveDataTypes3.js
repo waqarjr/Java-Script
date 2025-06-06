@@ -36,3 +36,17 @@ console.log(typeof bigInt); // output: bigint
 // Symbol
 const sym1 = Symbol("id");
 console.log(typeof sym1); // output: symbol
+
+// Primitive - stored by value
+let a = 10;
+let b = a;
+b = 20;
+console.log(a); // 10 (not affected)
+console.log(b); // 20
+
+// Non-Primitive - stored by reference
+let person1 = { name: "Ali" };
+let person2 = person1;
+person2.name = "Ahmed";
+
+console.log(person1.name); // "Ahmed" (both point to same object)

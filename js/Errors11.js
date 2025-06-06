@@ -12,7 +12,7 @@ try {
     let x = y + 5;  // 'y' is not defined, will cause an error
 } catch (error) {
     console.log("An error occurred:", error.message);
-}// y is not defined
+}// y is not defined`
 
 // <>... Using finally ...<>
 try {

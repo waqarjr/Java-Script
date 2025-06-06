@@ -136,7 +136,7 @@ const data = {
   name: "Olivia",
   age: 27
 };
-
+console.log(data);
 // Convert object to JSON string
 const jsonString = JSON.stringify(data);
 console.log(jsonString); // {"name":"Olivia","age":27}

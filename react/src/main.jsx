@@ -10,9 +10,9 @@ import Formvalidation from './Formvalidation'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     {/* <App /> */}
-    {/* <Hook/> */}
+    <Hook/>
     {/* <Hooks1/> */}
     {/* <Formhandle/> */}
-    <Formvalidation/>
+    {/* <Formvalidation/> */}
   </StrictMode>
 )

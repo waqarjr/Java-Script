@@ -22,6 +22,7 @@ function fetchData(callback) {
   fetchData((result) => {
     console.log(result); // "Sample Data" after 1 second
   });
+  
 // Callback Hell: When multiple asynchronous operations are nested, the code can become hard to read and maintain  
 // Error Handling: Managing errors through callbacks can be cumbersome.
 

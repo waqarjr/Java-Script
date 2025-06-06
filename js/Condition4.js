@@ -81,8 +81,15 @@ let user = {};
 // in user Object user.profile is not find then he give us undefined instead of error 
 // for further checking if in profile name not find he give us nufined value instead of error
 
-console.log(user?.profile?.name); // Output: undefined
+const user1 = {
+    name:"waqar",
+    address:{
+        city:"Okara",
+    }
+}
 
+console.log(user1?.address?.city); // Output: undefined
+console.log(user1.keys().length)
 // Note *
 console.log(Boolean(0)) //output: False
 console.log(Boolean(1)) // output: True

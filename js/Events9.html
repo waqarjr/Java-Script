@@ -139,7 +139,7 @@ once.addEventListener('click',()=>{
 },{once:true})
 
 document.getElementById("child").addEventListener("click", function (event) {
-    if (event.target.matches(".child")) {
+    if (!event.target.matches(".child")) {
         console.log("Child clicked:", event.target.textContent);
     }
 });

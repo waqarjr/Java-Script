@@ -75,10 +75,3 @@ async function fetchDataAsyncHell() {
 }
 
 fetchDataAsyncHell();
-
-
-
-
-
-
-

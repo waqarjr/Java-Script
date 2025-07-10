@@ -144,7 +144,7 @@ const user = {
 user.greet(); // Output: Hello Waqar
 
 // Promise	A built-in JavaScript object representing the eventual result (or failure) of an async operation
-function fetchData() {
+function fetchData1() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve("Data fetched");
@@ -152,14 +152,14 @@ function fetchData() {
   });
 }
 
-fetchData()
+fetchData1()
   .then(result => console.log(result)) // "Data fetched"
   .catch(error => console.log(error));
 
 // async/await	A cleaner way to work with Promises using async functions and the await keyword.
 async function getData() {
   try {
-    const result = await fetchData(); // waits for Promise to resolve
+    const result = await fetchData1(); // waits for Promise to resolve
     console.log(result);
   } catch (error) {
     console.log(error);
@@ -183,3 +183,20 @@ console.log(sum); // Output: 10
 // 1: Stack Memory -> number, string, boleans ,null, undefined  
 // 2: Heap Memort -> Objects ,function, Array
 
+// Deep Copy vs Shallow Copy in JavaScript
+
+// in the shallow copy of an object the main properties are copied, but any nested objects or array still linked to the original 
+// with a deep copy every part of the object, including all nested objects or array is fully copied , ensuring the modification to the copy doesn't affect the original 
+
+// Example:
+const original = { a: 1, b: { c: 2 } };
+// Shallow copy
+original.b.c = 42;
+console.log(original.b.c); // Output: 42 (original is affected)
+
+// Deep copy
+const deepCopy = JSON.parse(JSON.stringify(original));
+deepCopy.b.c = 100;
+console.log(original.b.c); // Output: 42 (original is not affected)
+
+//  strick moood

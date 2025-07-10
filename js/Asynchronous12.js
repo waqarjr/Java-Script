@@ -18,7 +18,7 @@ function fetchData(callback) {
       callback(data);
     }, 1000);
   }
-  
+
   fetchData((result) => {
     console.log(result); // "Sample Data" after 1 second
   });

@@ -90,6 +90,26 @@ removeBtn.addEventListener('click',function() {
     removeDiv.remove(); // removes the div
 })
 
+// textContent => It ignores HTML tags and returns all text, including hidden elements
+// <div id="demo">
+//   Hello <span style="display:none">World</span>
+// </div>
+// document.getElementById("demo").textContent; // "Hello World"
+
+// innerText
+// <div id="demo">
+//   Hello <span style="display:none">World</span>
+// </div>
+// document.getElementById("demo").innerText; // "Hello"
+
+// | Feature       | `textContent`      | `innerText`            | `innerHTML`                |
+// | ------------- | ------------------ | ---------------------- | -------------------------- |
+// | Returns       | All text           | Visible text only      | HTML markup as string      |
+// | Ignores CSS   | ✅ Yes              | ❌ No                   | N/A                     |
+// | Includes tags | ❌ No               | ❌ No                   | ✅ Yes                  |
+// | Faster?       | ✅ Yes              | ❌ No (layout reflow)   | ⚠️ Depends              |
+// | Use case      | Get/set plain text | Read visible text only | Inject/read HTML structure |
+
 
 </script>
 </body>

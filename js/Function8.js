@@ -7,10 +7,20 @@ function greet() {
 // calling a function 
 greet();
 
+// Function Expression
+// A function can also be assigned to a variable.
+const greet1 = function() {
+  console.log("Hello!");
+};
+
+greet1(); // Works, but only after definition
+
 // <>... Function with Parameters and Arguments ...<>
+// name is a parameter 
 function greetUser(name) {
     console.log("Hello, " + name + "!");
 }
+// but john is a argument
 greetUser("John"); // Output: Hello, John!
 
 // Add parameters
@@ -26,6 +36,19 @@ function multiply(a, b) {
 }
 let result = multiply(4, 3);
 console.log(result); // Output: 12
+
+// Default parameter 
+function greet12(name = "Guest") {
+  console.log("Hello, " + name);
+}
+greet12();          // Hello, Guest
+greet12("Alice");   // Hello, Alice
+function total(a, b = a * 2) {
+  return a + b;
+}
+
+console.log(total(5)); // 5 + 10 = 15
+
 
 // Arrow Function 
 // Arrow functions provide a shorter syntax for writing functions
@@ -44,6 +67,27 @@ console.log(multiplyNumbers(4, 2)); // Output: 8
 
 // <>...  Updating and Changing Values Inside a Function ...<>
 // Functions can modify values and return updated values.
+
+// Rest Parameters (...args)
+// Definition:
+// Rest parameters collect multiple arguments into a single array.
+
+function sum1(...numbers) {
+  return numbers.reduce((acc, curr) => acc + curr, 0);
+}
+console.log(sum1(1, 2, 3, 4)); // 10
+
+
+// Takes another function as an argument, or
+// Returns a function.
+function multiplyBy(factor) {
+  return function(num) {
+    return num * factor;
+  };
+}
+const double = multiplyBy(2);
+console.log(double(5)); // 10
+
 
 // Updating an Object Property :
 

@@ -123,15 +123,16 @@ document.getElementById("parent").addEventListener("click", function (event) {
 });
 
 // removeEventListener used to remove the event listner
-function showMessage(){
-    alert("this is a alert")
-}
 const aler = document.getElementById("alert");
 aler.addEventListener("click",showMessage);
 
+function showMessage(){
+    alert("this is a alert")
+}
+
 setTimeout(()=>{
     aler.removeEventListener("click",showMessage);
-},5000) 
+},100) 
 // for only once time open we can use this 
 const once = document.getElementById("once");
 once.addEventListener('click',()=>{

@@ -89,7 +89,7 @@ const user1 = {
 }
 
 console.log(user1?.address?.city); // Output: undefined
-console.log(user1.keys().length)
+console.log(Object.keys(user1).length);
 // Note *
 console.log(Boolean(0)) //output: False
 console.log(Boolean(1)) // output: True

@@ -1,6 +1,22 @@
 // express is a web framework for Node.js.
 // it is a middleware that allows you to create a server.
 
+// 1. Simplified Web Development
+// Express.js provides a lightweight framework that simplifies the process
+// of building web applications in Node.js.
+
+// 2. Middleware Support
+// Easy integration of middleware functions into application's request-
+// response cycle.
+
+// 3. Flexible Routing System
+// Defining routes for handling different HTTP methods (GET, POST, PUT,
+// DELETE, etc.) and URL patterns is easy.
+
+// 4. Template Engine Integration
+// Express.js supports various template engines making it easy to
+// generate dynamic HTML content on the server side.
+
 // create a server
 const express = require('express');
 const app = express();

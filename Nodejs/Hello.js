@@ -10,7 +10,7 @@ const os = require('os');
 
 
 console.log(1);
-// blocking
+// non-blocking Asynchronous
 fs.readFile('data.txt', 'utf8', (err, data) => {
     if (err) {
         console.error('Error reading file:', err);

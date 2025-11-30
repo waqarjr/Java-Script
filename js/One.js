@@ -1,3 +1,15 @@
+
+
+try{
+    alpha();
+    const alpha = ()=>{
+        console.log("Ahmad")
+    }
+}catch (error) {
+    console.log(error.name);
+}
+
+
 function greet() {
     console.log("Waqar ahmad");
 }

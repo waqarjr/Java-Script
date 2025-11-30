@@ -91,7 +91,7 @@ for (let num of Arraynumbers) {
 }
 
 //      String 
-let word = "Hello";
+let word = "Hello"; 
 for (let letter of word) {
     console.log(letter);
 }

@@ -181,8 +181,16 @@
 
 const original = { name: "Ali", address: { city: "Lahore" } };
 const copy = Object.assign({}, original);
-copy.name = "Sara";        // Changes only in copy ✅
-copy.address.city = "Karachi"; // Also changes `original` ❌
+copy.name = "Sara"; 
+copy.address.city = "Karachi"; 
 console.log(copy);
+console.log(original); 
 
-console.log(original); // "Karachi"
+console.log("Start");
+setTimeout(() => console.log("Timeout"), 0);
+Promise.resolve().then(() => console.log("Promise"));
+console.log("End");
+// Start
+// End
+// Promise
+// Timeout

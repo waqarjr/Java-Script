@@ -139,7 +139,8 @@ console.log(sentence); // "Hello World"
 //<>... Using split() (Convert String to Array) ...<>
 let text = "apple,banana,grape";
 let fruitArray = text.split(",");
-console.log(fruitArray); // ["apple", "banana", "grape"]
+console.log(fruitArray); // ["apple", "ba
+// nana", "grape"]
 
 //<>... Finding Elements (find(), findIndex()) ...<>
 // find()
@@ -160,3 +161,7 @@ let nestedArray = [1, [2, [3, 4]], 5];
 let flatArray = nestedArray.flat(2); // Flattening 2 levels deep
 console.log(flatArray); // [1, 2, 3, 4, 5]
 
+// Example: Filtering an array to get even numbers
+let numbersArr = [1, 2, 3, 4, 5, 6, 7, 8];
+let evenNumbers = numbersArr.filter(num => num % 2 === 0);
+console.log(evenNumbers); // [2, 4, 6, 8]

@@ -1,6 +1,6 @@
 // A function is a reusable block of code that performs a specific task.
 
-// Function Decleration 
+// Function DeFration 
 function greet() {
     console.log("Hello, welcome to JavaScript!");
 }

@@ -129,7 +129,23 @@ const addition = (x, y) => x + y; // Arrow Function
 const multiplication = (x, y) => x * y; // Arrow Function
 
 console.log(calculate(10, 5, addition)); // Output: 15
-console.log(calculate(10, 5, multiplication)); // Output: 50
+console.log(calculate(10, 5, multiplication)); // Output: 50 
+
+// A Higher-Order Function is a function that: accepts a function as an argument, OR returns a function
+function calculate(a, b, operation) {
+  return operation(a, b);
+}
+
+function add(x, y) {
+  return x + y;
+}
+
+calculate(5, 3, add); // 8
+
+// Build in functions
+[1, 2, 3].map(n => n * 2);
+[1, 2, 3].filter(n => n > 1);
+
 
 // Exemple : 2
 function fetchData(callback) {
@@ -177,3 +193,59 @@ function outerFunction(outerValue) {
 }
 const myClosure = outerFunction("Hello");
 myClosure("World"); // Output: Outer: Hello, Inner: World
+
+
+
+// Callback Hell happens when many callbacks are nested inside each other, making code hard to read and maintain.
+// Example
+getUser(id, function(user) {
+  getPosts(user.id, function(posts) {
+    getComments(posts[0].id, function(comments) {
+      console.log(comments);
+    });
+  });
+});
+
+
+
+// | Feature        | Library         | Framework        |
+// | -------------- | --------------- | ---------------- |
+// | Control        | **You call it** | **It calls you** |
+// | Structure      | Optional        | Pre-defined      |
+// | Flexibility    | High            | Less             |
+// | Decision power | Developer       | Framework        |
+
+
+// Normal React (Client-Side Rendering – CSR)
+// Browser downloads empty HTML
+// JS loads
+// React builds UI in browser
+// Page becomes visible
+
+// How SSR actually works (Step-by-step)
+// User requests /profile
+// Server runs React
+// React generates HTML
+// Server sends ready-made HTML
+// Browser shows page immediately
+// React JS loads and hydrates (adds events)
+
+// Static Site Generation (SSG)
+// Core Definition
+// SSG = HTML is generated ONCE at build time
+
+// Static Site Generation (SSG)
+// You run npm run build
+// Pages convert to HTML files
+// Stored on CDN
+// User requests page
+// HTML is instantly served
+// React hydrates
+
+// Hydration = React attaches JS logic to existing HTML
+// Hydration flow
+// Server sends HTML
+// Browser shows content
+// React JS loads
+// React matches HTML with Virtual DOM
+// Event listeners attach

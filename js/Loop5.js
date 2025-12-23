@@ -70,6 +70,10 @@ for (let i = 1; i <= n; i++) {
 let person = { name: "Ali", age: 25, country: "Pakistan" };
 console.log(person["name"]); //Output: Ali
 console.log(person.name); // Output: Ali
+
+// person.key → looks for a property literally called "key"
+// person[key] → uses the value of the variable key
+
 // Both output same just for get single output value but in loop or multiple objects are present then ->  
 // we can't use *person.name* bcoz this will show only name but we needed a his value to so that's way we use this person["name"]
 for (let hello in person) {
